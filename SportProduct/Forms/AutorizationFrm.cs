@@ -53,7 +53,7 @@ namespace SportProduct
             if (tryCount == 0)
             {
                 while (true)
-                {*
+                {
                     await Task.Delay(10000);
                     pnlBackround.Visible = true;
                     tryCount = 1;
