@@ -167,6 +167,8 @@
             this.Controls.Add(this.pnlBackround);
             this.Controls.Add(this.pnlBlockGetData);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(296, 242);
+            this.MinimumSize = new System.Drawing.Size(296, 242);
             this.Name = "AutorizationFrm";
             this.Text = "Авторизация";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AutorizationFrm_FormClosed);

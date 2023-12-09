@@ -14,9 +14,6 @@ namespace SportProduct
 {
     public partial class AutorizationFrm : Form
     {
-        DB_OOO_Sportivnyue_Tovaryu1Entities DBcon = new DB_OOO_Sportivnyue_Tovaryu1Entities();
-        public int tryCount = 1;
-
         public AutorizationFrm()
         {
             InitializeComponent();
@@ -26,6 +23,9 @@ namespace SportProduct
         {
 
         }
+
+        DB_OOO_Sportivnyue_Tovaryu1Entities DBcon = new DB_OOO_Sportivnyue_Tovaryu1Entities();
+        public int tryCount = 1;
 
         private void btnJoinAcc_Click(object sender, EventArgs e)
         {
@@ -53,7 +53,7 @@ namespace SportProduct
             if (tryCount == 0)
             {
                 while (true)
-                {
+                {*
                     await Task.Delay(10000);
                     pnlBackround.Visible = true;
                     tryCount = 1;
