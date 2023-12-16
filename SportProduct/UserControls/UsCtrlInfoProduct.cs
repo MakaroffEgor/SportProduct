@@ -14,21 +14,21 @@ namespace SportProduct.UserControls
 {
     public partial class UsCtrlInfoProduct : UserControl
     {
+        public UsCtrlInfoProduct()
+        {
+            InitializeComponent();
+        }
+
+        private void UsCtrlInfoProduct_Load(object sender, EventArgs e)
+        {
+
+        }
+
         public event EventHandler ClickUserControl;
          public bool ChoiseUsCtrl { get; private set; }
 
         private void pnlMainBackround_MouseClick(object sender, MouseEventArgs e)
         {
-            if (ChoiseUsCtrl == false)
-            {
-                pnlMainBackround.BackColor = Color.Green;
-                ChoiseUsCtrl = true;
-            }
-            else
-            {
-                pnlMainBackround.BackColor = Color.Teal;
-                ChoiseUsCtrl = false;
-            }
             ClickUserControl?.Invoke(this, e);
         }
 
@@ -48,16 +48,6 @@ namespace SportProduct.UserControls
         {
             // Обновление цвета фона в зависимости от выбранного состояния
             pnlMainBackround.BackColor = ChoiseUsCtrl ? Color.Green : Color.Teal;
-        }
-
-        public UsCtrlInfoProduct()
-        {
-            InitializeComponent();
-        }
-
-        private void UsCtrlInfoProduct_Load(object sender, EventArgs e)
-        {
-
         }
 
         #region PropertyUsCtrl
