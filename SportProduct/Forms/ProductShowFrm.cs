@@ -55,6 +55,23 @@ namespace SportProduct.Forms
         private void UsCtrlInfoProduct_Click(object sender, EventArgs e)
         {
             selectIndex = sender as UsCtrlInfoProduct;
+            UsCtrlInfoProduct clickedUsCtrl = sender as UsCtrlInfoProduct;
+
+            if (clickedUsCtrl != null)
+            {
+                // Сбросить цвет фона для всех элементов в FlowLayoutPanel
+                foreach (UsCtrlInfoProduct usCtrl in FLPShowProductList.Controls)
+                {
+                    usCtrl.Unchoose();
+                }
+
+                // Выбрать текущий элемент
+                clickedUsCtrl.Choose();
+
+                // Далее ваш код обработки выбранного элемента
+                selectIndex = clickedUsCtrl;
+                // ...
+            }
         }
 
         private void btnBackForm_Click(object sender, EventArgs e)
