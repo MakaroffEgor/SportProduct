@@ -21,16 +21,16 @@ namespace SportProduct.Forms
         DB_OOO_Sportivnyue_Tovaryu1Entities DBcon = new DB_OOO_Sportivnyue_Tovaryu1Entities();
         public UsCtrlInfoProduct selectIndex;
 
+        private void ProductShowFrm_Load(object sender, EventArgs e)
+        {
+
+        }
+
         public ProductShowFrm(string name)
         {
             InitializeComponent();
             StartShowProduct();
             lblNameUserDB.Text = name;
-        }
-
-        private void ProductShowFrm_Load(object sender, EventArgs e)
-        {
-
         }
 
         public void StartShowProduct() 
@@ -59,18 +59,12 @@ namespace SportProduct.Forms
 
             if (clickedUsCtrl != null)
             {
-                // Сбросить цвет фона для всех элементов в FlowLayoutPanel
                 foreach (UsCtrlInfoProduct usCtrl in FLPShowProductList.Controls)
                 {
                     usCtrl.Unchoose();
                 }
-
-                // Выбрать текущий элемент
                 clickedUsCtrl.Choose();
-
-                // Далее ваш код обработки выбранного элемента
                 selectIndex = clickedUsCtrl;
-                // ...
             }
         }
 
