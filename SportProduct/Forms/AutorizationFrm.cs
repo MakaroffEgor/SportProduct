@@ -66,7 +66,6 @@ namespace SportProduct
         {
             new ProductShowFrm("Гость").Show();
             this.Hide();
-
         }
 
         private void AutorizationFrm_FormClosed(object sender, FormClosedEventArgs e)

@@ -174,6 +174,8 @@
             this.Controls.Add(this.pnlButton);
             this.Controls.Add(this.FLPShowProductList);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(969, 441);
+            this.MinimumSize = new System.Drawing.Size(969, 441);
             this.Name = "ProductShowFrm";
             this.Text = "Список Товаров";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ProductShowFrm_FormClosed);
